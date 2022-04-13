@@ -1,7 +1,11 @@
-import "./App.css";
+import { AppContainer, ForecastContainer } from "./AppStyles";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <AppContainer>
+      <ForecastContainer></ForecastContainer>
+    </AppContainer>
+  );
 }
 
 export default App;
