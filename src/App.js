@@ -1,9 +1,12 @@
 import { AppContainer, ForecastContainer } from "./AppStyles";
+import LocationDetails from "./components/LocationDetails";
 
 function App() {
   return (
     <AppContainer>
-      <ForecastContainer></ForecastContainer>
+      <ForecastContainer>
+        <LocationDetails />
+      </ForecastContainer>
     </AppContainer>
   );
 }

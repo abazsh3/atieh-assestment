@@ -8,4 +8,5 @@ export const ForecastContainer = styled.div`
   flex-direction: row;
   width: 80%;
   justify-content: space-between;
+  margin: 40px auto;
 `;
