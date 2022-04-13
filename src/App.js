@@ -1,4 +1,5 @@
 import { AppContainer, ForecastContainer } from "./AppStyles";
+import ForecastDetails from "./components/ForecastDetails/ForecastDetails";
 import LocationDetails from "./components/LocationDetails";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <AppContainer>
       <ForecastContainer>
         <LocationDetails />
+        <ForecastDetails />
       </ForecastContainer>
     </AppContainer>
   );

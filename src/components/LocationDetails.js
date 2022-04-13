@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { METAWEATHER_URL, WOEID } from "../constants";
 import { formattedTime } from "../utils/helper";
 
-export const Container = styled.div`
+const Container = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
