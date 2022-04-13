@@ -16,7 +16,7 @@ const Container = styled.div`
 const AbbrContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 5px;
+  margin-top: 12px;
 
   align-items: baseline;
   margin-bottom: 10px;
@@ -32,6 +32,7 @@ const WindIcon = styled.div`
   height: 15px;
   background-size: 100%;
   transform: rotate(270deg);
+  margin-right: 5px;
 `;
 
 export default function ForecastDetails({}) {

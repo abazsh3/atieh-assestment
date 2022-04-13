@@ -1,6 +1,6 @@
 import axios from "axios";
 import { API_BASE_URL } from "./constants";
-const instance = axios.create({
+const apiService = axios.create({
   baseURL: API_BASE_URL,
 });
-export default instance;
+export default apiService;
