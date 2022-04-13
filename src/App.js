@@ -8,6 +8,10 @@ function App() {
       <ForecastContainer>
         <LocationDetails />
         <ForecastDetails />
+        <ForecastDetails />
+        <ForecastDetails />
+        <ForecastDetails />
+        <ForecastDetails />
       </ForecastContainer>
     </AppContainer>
   );
