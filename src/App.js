@@ -34,9 +34,13 @@ function App() {
     <AppContainer>
       <ForecastContainer>
         <LocationDetails />
-        {weatherState.map((weather) => (
-          <ForecastDetails weather={weather} />
-        ))}
+        {weatherState.map((weather, index) => {
+          //we show 4 columns but api give us 5
+          if (index > 4) {
+            return null;
+          }
+          return <ForecastDetails weather={weather} index={index} />;
+        })}
       </ForecastContainer>
     </AppContainer>
   );

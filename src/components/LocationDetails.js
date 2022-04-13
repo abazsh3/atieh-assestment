@@ -5,8 +5,9 @@ import { formattedTime } from "../utils/helper";
 
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(min-content, max-content));
   grid-gap: 10px;
+  justify-content: flex-start;
 `;
 
 export default function LocationDetails() {

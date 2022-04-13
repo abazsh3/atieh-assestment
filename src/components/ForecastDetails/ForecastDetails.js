@@ -33,10 +33,19 @@ const WindIcon = styled.div`
   background-size: 100%;
   transform: rotate(270deg);
   margin-right: 5px;
+  margin-top: 3px;
 `;
 
-export default function ForecastDetails({}) {
-  const date = new Date();
+export default function ForecastDetails({ weather, index }) {
+  const date = new Date(weather.applicable_date);
+  const weekDay = date.toLocaleDateString("en-Us", { weekday: "short" });
+  const monthName = date.toLocaleDateString("en-Us", { month: "short" });
+  let dayName = `${weekDay} ${date.getDate()} ${monthName}`;
+  if (index === 0) {
+    dayName = "Today";
+  } else if (index === 1) {
+    dayName = "Tomorrow";
+  }
   return (
     <Container>
       <h3>
@@ -45,18 +54,18 @@ export default function ForecastDetails({}) {
             date.getUTCMonth() + 1
           }/${date.getDate()}`}
         >
-          Today
+          {dayName}
         </a>
       </h3>
       <AbbrContainer>
-        <AbbrIcon primary abbr={"hc"} />
-        <span>Heavy Cloud</span>
+        <AbbrIcon primary abbr={weather.weather_state_abbr} />
+        <span>{weather.weather_state_name}</span>
       </AbbrContainer>
-      <span>Max: 29°C</span>
-      <span>Min: 21°C</span>
+      <span>Max: {weather.max_temp}°C</span>
+      <span>Min: {weather.min_temp}°C</span>
       <WindContainer>
         <WindIcon />
-        <span>6 mph</span>
+        <span>{parseInt(weather.wind_speed)} mph</span>
       </WindContainer>
     </Container>
   );
